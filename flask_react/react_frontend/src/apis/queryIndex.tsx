@@ -12,14 +12,13 @@ export type QueryResponse = {
 };
 
 const queryIndex = async (query: string): Promise<QueryResponse> => {
-  const queryURL = new URL('http://localhost:5601/query?');
+  const queryURL = new URL('https://capitalhumain-bookish-space-couscous-p7xxj7vv4f75xj-5601.preview.app.github.dev/query?');
   queryURL.searchParams.append('text', query);
 
   const response = await fetch(queryURL, { mode: 'cors' });
   if (!response.ok) {
     return { text: 'Error in query', sources: [] };
   }
-
   const queryResponse = (await response.json()) as QueryResponse;
 
   return queryResponse;

@@ -4,7 +4,7 @@ export type Document = {
 };
 
 const fetchDocuments = async (): Promise<Document[]> => {
-  const response = await fetch('http://localhost:5601/getDocuments', { mode: 'cors' });
+  const response = await fetch('https://capitalhumain-bookish-space-couscous-p7xxj7vv4f75xj-5601.preview.app.github.dev/getDocuments', { mode: 'cors' });
 
   if (!response.ok) {
     return [];
