@@ -15,7 +15,7 @@ The basic demo includes the classic "Paul Graham Essay" from the original llama_
 conda create --name llama_index python=3.11
 pip install -r requirements.txt
 ```
-
+ps -fA | grep python
 
 ## What is included?
 There are two main example folders
